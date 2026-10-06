@@ -1,0 +1,489 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Klara studiert Geoinformatik und Vermessung in Mainz und interessiert sich für Karten, Geodaten und unsere Umwelt.">
+  <title>Klara – Geoinformatik und Vermessung in Mainz</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d2926;
+      --muted: #52615c;
+      --paper: #f5f6f1;
+      --surface: #fff;
+      --accent: #245b49;
+      --line: #d9dfd9;
+      --content-width: 68rem;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.2em;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #ad6a18;
+      outline-offset: 4px;
+    }
+
+    .wrap {
+      width: min(100% - 2.5rem, var(--content-width));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      padding-block: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .wordmark {
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-header nav a {
+      margin-left: 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    main {
+      padding-block: clamp(3rem, 8vw, 6.5rem);
+    }
+
+    section + section {
+      margin-top: clamp(3.5rem, 8vw, 6rem);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(13rem, 0.75fr);
+      align-items: center;
+      gap: clamp(2rem, 7vw, 5.5rem);
+    }
+
+    .eyebrow {
+      margin: 0 0 0.8rem;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    figure {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 12ch;
+      margin-bottom: 1.25rem;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      letter-spacing: -0.055em;
+      line-height: 1.02;
+    }
+
+    h2 {
+      margin-bottom: 1.25rem;
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+    }
+
+    .intro-copy {
+      max-width: 39rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .portrait {
+      margin: 0;
+    }
+
+    .portrait-art {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 0.35rem;
+      background: #e1e8e2;
+    }
+
+    .portrait figcaption {
+      margin-top: 0.65rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .closing-note {
+      display: grid;
+      grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1.2fr);
+      align-items: center;
+      gap: clamp(1.5rem, 5vw, 3rem);
+      max-width: 48rem;
+    }
+
+    .closing-photo {
+      margin: 0;
+    }
+
+    .closing-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 0.35rem;
+      background: #e1e8e2;
+      object-fit: cover;
+    }
+
+    .closing-copy p:last-child {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .section-lead {
+      max-width: 42rem;
+      margin-bottom: 1.5rem;
+      color: var(--muted);
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 0.35rem;
+      background: var(--surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    caption {
+      padding: 1rem 1.1rem 0.4rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 0.85rem 1.1rem;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    thead th {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    tbody th {
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 0.35rem;
+      background: var(--surface);
+    }
+
+    .card a {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card a:hover h3 {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    .card img,
+    .card-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: #e1e8e2;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    .card-copy {
+      padding: 1.1rem 1.2rem 1.25rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .site-footer {
+      padding-block: 1.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .site-footer p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 46rem) {
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait {
+        max-width: 22rem;
+      }
+
+      .closing-note {
+        grid-template-columns: 1fr;
+        max-width: 22rem;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 35rem) {
+      .wrap {
+        width: min(100% - 1.5rem, var(--content-width));
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-header nav a {
+        margin: 0 1rem 0 0;
+      }
+
+      th,
+      td {
+        padding: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#start">Klara · Geoinformatik</a>
+      <nav aria-label="Hauptnavigation">
+        <a href="#stationen">Stationen</a>
+        <a href="#inspiration">Inspiration</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="start">
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="eyebrow">Geoinformatik · Vermessung · Mainz</p>
+        <h1 id="intro-title">Hallo, ich bin Klara.</h1>
+        <div class="intro-copy">
+          <p>Ich studiere Geoinformatik und Vermessung in Mainz. Mich interessiert, wie sich unsere Welt mit Karten, Messungen und Geodaten besser verstehen lässt.</p>
+          <p>Auf dieser Seite findest du Einblicke in mein Studium, meine Interessen und Themen, die mich inspirieren.</p>
+        </div>
+      </div>
+      <figure class="portrait">
+        <svg class="portrait-art" viewBox="0 0 640 800" role="img" aria-labelledby="portrait-title portrait-description" xmlns="http://www.w3.org/2000/svg">
+          <title id="portrait-title">Illustriertes Porträt</title>
+          <desc id="portrait-description">Stilisierte Illustration einer Person vor einem grünen Hintergrund.</desc>
+          <defs>
+            <linearGradient id="portrait-background" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#d9e8dc"/>
+              <stop offset="1" stop-color="#a9c6b2"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="800" fill="url(#portrait-background)"/>
+          <circle cx="500" cy="155" r="92" fill="#f1d7a9" opacity=".8"/>
+          <path d="M86 800c13-161 94-251 234-251s221 90 234 251" fill="#315d50"/>
+          <path d="M244 519h152v111c-16 45-44 66-76 66s-60-21-76-66z" fill="#d69d78"/>
+          <ellipse cx="320" cy="337" rx="151" ry="190" fill="#e7b591"/>
+          <path d="M169 353c-21-147 40-253 155-253 119 0 169 95 147 251-17-22-30-57-35-100-48 24-114 33-184 25-15 34-42 61-83 77z" fill="#49362f"/>
+          <path d="M191 341c-8 19-8 47 1 67 11 24 27 30 43 23l-2-90zM449 341c8 19 8 47-1 67-11 24-27 30-43 23l2-90z" fill="#e7b591"/>
+          <path d="M257 348c12-9 27-9 39 0M344 348c12-9 27-9 39 0" fill="none" stroke="#49362f" stroke-linecap="round" stroke-width="8"/>
+          <ellipse cx="278" cy="376" rx="7" ry="9" fill="#1d2926"/>
+          <ellipse cx="363" cy="376" rx="7" ry="9" fill="#1d2926"/>
+          <path d="M320 383c-5 25-11 48-17 62 10 8 22 10 34 3" fill="none" stroke="#bd8061" stroke-linecap="round" stroke-width="6"/>
+          <path d="M290 472c19 15 42 15 61 0" fill="none" stroke="#9d574b" stroke-linecap="round" stroke-width="7"/>
+          <path d="M206 303c28-54 61-81 101-81 46 0 81 27 117 75" fill="none" stroke="#49362f" stroke-linecap="round" stroke-width="33"/>
+          <path d="M178 800c27-102 77-151 142-151s115 49 142 151" fill="#f5f6f1"/>
+          <path d="M320 649l-34 74 34 34 34-34z" fill="#ad7659"/>
+        </svg>
+        <figcaption>Ein stilisiertes Porträt als Platzhalter für ein eigenes Foto.</figcaption>
+      </figure>
+    </section>
+
+    <section id="stationen" aria-labelledby="stationen-title">
+      <p class="eyebrow">Mein Weg</p>
+      <h2 id="stationen-title">Drei Stationen</h2>
+      <p class="section-lead">Drei beispielhafte Stationen rund um mein Studium und meine Interessen.</p>
+      <div class="table-scroll">
+        <table>
+          <caption>Stationen auf einen Blick</caption>
+          <thead>
+            <tr>
+              <th scope="col">Jahr</th>
+              <th scope="col">Station</th>
+              <th scope="col">Ort</th>
+              <th scope="col">Stichwort</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2024</th>
+              <td>Studienbeginn</td>
+              <td>Mainz</td>
+              <td>Geoinformatik</td>
+            </tr>
+            <tr>
+              <th scope="row">2025</th>
+              <td>Vermessung kennenlernen</td>
+              <td>Mainz</td>
+              <td>Präzision</td>
+            </tr>
+            <tr>
+              <th scope="row">2026</th>
+              <td>Geodaten erforschen</td>
+              <td>Mainz</td>
+              <td>Karten &amp; GIS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="inspiration" aria-labelledby="inspiration-title">
+      <p class="eyebrow">Zum Weiterstöbern</p>
+      <h2 id="inspiration-title">Dinge, die mich inspirieren</h2>
+      <p class="section-lead">Drei offene Türen zu Karten, Werkzeugen und Geschichten über unseren Planeten.</p>
+      <div class="gallery">
+        <article class="card">
+          <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">
+            <svg class="card-image" viewBox="0 0 900 563" role="img" aria-labelledby="map-title map-description" xmlns="http://www.w3.org/2000/svg">
+              <title id="map-title">Illustration einer offenen Stadtkarte</title>
+              <desc id="map-description">Ein Stadtplan mit Straßen, Grünflächen und einem blauen Fluss.</desc>
+              <rect width="900" height="563" fill="#e9eee2"/>
+              <path d="M0 415c122-69 176-45 267-99s161-29 235 20 133 74 230 29 119-45 168-73v271H0z" fill="#b9d8cf"/>
+              <path d="M-30 115 940 466M30 590 790-35M130-30l600 630M-25 305 904 94M292-32l-83 630M595-24 465 590" fill="none" stroke="#fff" stroke-width="28"/>
+              <path d="M-30 115 940 466M30 590 790-35M130-30l600 630M-25 305 904 94M292-32l-83 630M595-24 465 590" fill="none" stroke="#d6b98d" stroke-width="5"/>
+              <path d="M46 199 863 381M190 31 118 531M458 14 331 554M790 75 690 521" fill="none" stroke="#fff" stroke-width="15"/>
+              <path d="M46 199 863 381M190 31 118 531M458 14 331 554M790 75 690 521" fill="none" stroke="#c9d1c6" stroke-width="3"/>
+              <path d="M598 34h139v95H598zM81 361h133v89H81zM674 405h112v81H674z" fill="#c9ddbd"/>
+              <circle cx="467" cy="285" r="23" fill="#245b49" stroke="#fff" stroke-width="8"/>
+            </svg>
+            <div class="card-copy">
+              <h3>OpenStreetMap</h3>
+              <p>Eine offene Karte, die von Menschen überall auf der Welt gestaltet wird.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a href="https://qgis.org/" target="_blank" rel="noopener noreferrer">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Landschaft im warmen Abendlicht" width="900" height="563" loading="lazy">
+            <div class="card-copy">
+              <h3>QGIS</h3>
+              <p>Freie Werkzeuge, um räumliche Daten sichtbar und verständlich zu machen.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <a href="https://earthobservatory.nasa.gov/" target="_blank" rel="noopener noreferrer">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Erde aus der Perspektive des Weltraums" width="900" height="563" loading="lazy">
+            <div class="card-copy">
+              <h3>NASA Earth Observatory</h3>
+              <p>Anschauliche Geschichten und Bilder zu Veränderungen auf der Erde.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing-note" aria-labelledby="closing-title">
+      <figure class="closing-photo">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Weite Landschaft im warmen Abendlicht" width="900" height="675" loading="lazy">
+      </figure>
+      <div class="closing-copy">
+        <p class="eyebrow">Draußen unterwegs</p>
+        <h2 id="closing-title">Neue Perspektiven finden</h2>
+        <p>Am liebsten entdecke ich Landschaften Schritt für Schritt – und nehme dabei immer einen neuen Blickwinkel mit.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span>2026</span> Klara · Geoinformatik und Vermessung in Mainz.</p>
+    </div>
+  </footer>
+</body>
+</html>

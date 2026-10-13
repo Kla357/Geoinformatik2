@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projektideen und Ressourcen zu Web-Maps und Geoinformatik von Klara.">
+  <title>Projekte – Klara</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="index.html">Klara · Geoinformatik</a>
+      <nav aria-label="Hauptnavigation">
+        <a href="index.html">Über mich</a>
+        <a href="news.html">Artikel</a>
+        <a href="projects.html" aria-current="page">Projekte</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Zum Dunkelmodus wechseln" aria-pressed="false">
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+          </svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <header class="page-heading">
+      <p class="eyebrow">Portfolio · Geoinformatik</p>
+      <h1>Projekte</h1>
+      <p class="lead">Projektideen und Werkzeuge rund um Web-Maps, Geodaten und Webgestaltung. Die Links führen zu den verwendeten offenen Karten und Ressourcen.</p>
+    </header>
+    <section class="project-grid" aria-label="Projekte und Ressourcen">
+      <article class="project-card">
+        <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">
+          <svg class="project-image" viewBox="0 0 900 563" role="img" aria-labelledby="map-title map-description" xmlns="http://www.w3.org/2000/svg">
+            <title id="map-title">Illustration einer offenen Stadtkarte</title>
+            <desc id="map-description">Ein Stadtplan mit Straßen, Grünflächen und einem blauen Fluss.</desc>
+            <rect width="900" height="563" fill="#e9eee2"/>
+            <path d="M0 415c122-69 176-45 267-99s161-29 235 20 133 74 230 29 119-45 168-73v271H0z" fill="#b9d8cf"/>
+            <path d="M-30 115 940 466M30 590 790-35M130-30l600 630M-25 305 904 94M292-32l-83 630M595-24 465 590" fill="none" stroke="#fff" stroke-width="28"/>
+            <path d="M-30 115 940 466M30 590 790-35M130-30l600 630M-25 305 904 94M292-32l-83 630M595-24 465 590" fill="none" stroke="#d6b98d" stroke-width="5"/>
+            <path d="M46 199 863 381M190 31 118 531M458 14 331 554M790 75 690 521" fill="none" stroke="#fff" stroke-width="15"/>
+            <path d="M46 199 863 381M190 31 118 531M458 14 331 554M790 75 690 521" fill="none" stroke="#c9d1c6" stroke-width="3"/>
+            <path d="M598 34h139v95H598zM81 361h133v89H81zM674 405h112v81H674z" fill="#c9ddbd"/>
+            <circle cx="467" cy="285" r="23" fill="#245b49" stroke="#fff" stroke-width="8"/>
+          </svg>
+          <div class="project-copy">
+            <span class="project-label">Web-Map · Projektidee</span>
+            <h2>Orte in Mainz entdecken</h2>
+            <p>Eine interaktive Karte als Konzept, um interessante Orte in Mainz mit offenen Geodaten sichtbar zu machen.</p>
+            <span class="link-label">OpenStreetMap öffnen ↗</span>
+          </div>
+        </a>
+      </article>
+      <article class="project-card">
+        <a href="https://qgis.org/" target="_blank" rel="noopener noreferrer">
+          <img class="project-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Landschaft im warmen Abendlicht" width="900" height="563" loading="lazy">
+          <div class="project-copy">
+            <span class="project-label">GIS · Kartografie</span>
+            <h2>Geodaten visualisieren</h2>
+            <p>Räumliche Daten aufbereiten und als übersichtliche thematische Karte darstellen.</p>
+            <span class="link-label">QGIS entdecken ↗</span>
+          </div>
+        </a>
+      </article>
+      <article class="project-card">
+        <a href="https://earthobservatory.nasa.gov/" target="_blank" rel="noopener noreferrer">
+          <img class="project-image" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Erde aus der Perspektive des Weltraums" width="900" height="563" loading="lazy">
+          <div class="project-copy">
+            <span class="project-label">Webseite · Inspiration</span>
+            <h2>Erde im Wandel</h2>
+            <p>Eine Web-Erzählung als Konzept über Satellitenbilder und Veränderungen unserer Landschaft.</p>
+            <span class="link-label">NASA Earth Observatory öffnen ↗</span>
+          </div>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Klara · Geoinformatik und Vermessung in Mainz.</p>
+    </div>
+  </footer>
+  <aside class="contact-dock" aria-label="Kontakt und Profile">
+    <a href="https://www.linkedin.com/in/dein-profil/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn-Profil öffnen (Platzhalter)" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><text class="linkedin-mark" x="4" y="19">in</text></svg>
+    </a>
+    <a href="https://github.com/dein-benutzername" target="_blank" rel="noopener noreferrer" aria-label="GitHub-Profil öffnen (Platzhalter)" title="GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .1.75 2.48 3.4 1.76.1-.73.4-1.23.72-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.24 1.16-3.03-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.16a10.7 10.7 0 0 1 5.6 0c2.13-1.46 3.08-1.16 3.08-1.16.61 1.55.23 2.7.11 2.98.72.79 1.16 1.8 1.16 3.03 0 4.32-2.64 5.27-5.15 5.55.41.35.77 1.03.77 2.08v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
+    </a>
+    <a href="mailto:deine.email@example.com" aria-label="E-Mail schreiben (Platzhalter)" title="E-Mail">
+      <svg class="email-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+    </a>
+  </aside>
+</body>
+</html>

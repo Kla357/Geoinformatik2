@@ -1,2 +1,2 @@
-# Geoinformatik2
+# Kla357.github.io
 uebung1

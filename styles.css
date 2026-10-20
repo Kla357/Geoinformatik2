@@ -400,6 +400,53 @@ tbody th {
   letter-spacing: -0.025em;
 }
 
+.map-card > a {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.map-card > a:hover h2 {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.map-3d {
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.map-3d-heading {
+  max-width: 52rem;
+  margin-bottom: 1.5rem;
+}
+
+.map-3d-heading h2 {
+  margin-bottom: 0.8rem;
+}
+
+.map-3d-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  background: var(--surface);
+  box-shadow: 0 0.75rem 2rem rgba(28, 53, 39, 0.12);
+}
+
+.map-3d-frame iframe {
+  display: block;
+  width: 100%;
+  height: clamp(28rem, 65vh, 48rem);
+  border: 0;
+}
+
+.map-3d-credit {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .news-item .article-citation {
   margin-top: 0.85rem;
   font-size: 0.82rem;

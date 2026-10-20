@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3dc70d9b74fc7896dc7a872fb4827d41 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3dc70d9b74fc7896dc7a872fb4827d41" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3dc70d9b74fc7896dc7a872fb4827d41 = L.map(
+                "map_3dc70d9b74fc7896dc7a872fb4827d41",
+                {
+                    center: [50.0, 10.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7bccfc5991da8502e3b70be57feccbad = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+  "referrerPolicy": "origin",
+}
+
+            );
+        
+    
+            tile_layer_7bccfc5991da8502e3b70be57feccbad.addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+        
+    
+            var marker_05f99a4a6e41d95277dcacfad6085ba2 = L.marker(
+                [50.0, 8.271],
+                {
+}
+            ).addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+        
+    
+            var icon_a69b843ffecbbc47054dfa5b06d395a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_abb8850e0cc95ffb75c166414e643703 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_991712a742b8455cceacf74c9d17b657 = $(`<div id="html_991712a742b8455cceacf74c9d17b657" style="width: 100.0%; height: 100.0%;"><b>Mainz</b><br>Landeshauptstadt von Rheinland-Pfalz</div>`)[0];
+                popup_abb8850e0cc95ffb75c166414e643703.setContent(html_991712a742b8455cceacf74c9d17b657);
+            
+        
+
+        marker_05f99a4a6e41d95277dcacfad6085ba2.bindPopup(popup_abb8850e0cc95ffb75c166414e643703)
+        ;
+
+        
+    
+    
+            marker_05f99a4a6e41d95277dcacfad6085ba2.bindTooltip(
+                `<div>
+                     Mainz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_05f99a4a6e41d95277dcacfad6085ba2.setIcon(icon_a69b843ffecbbc47054dfa5b06d395a7);
+            
+    
+            var marker_1fe4cbac5e5960fa43392ed946b720b6 = L.marker(
+                [50.3569, 7.5889],
+                {
+}
+            ).addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+        
+    
+            var icon_bde77c26f7548aaffa146fd7168a7bff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_390198ddb3006d07c28c8d0c3b94c9fe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e4138e176e23daaf165623a467ff07d1 = $(`<div id="html_e4138e176e23daaf165623a467ff07d1" style="width: 100.0%; height: 100.0%;"><b>Koblenz</b><br>Stadt am Deutschen Eck</div>`)[0];
+                popup_390198ddb3006d07c28c8d0c3b94c9fe.setContent(html_e4138e176e23daaf165623a467ff07d1);
+            
+        
+
+        marker_1fe4cbac5e5960fa43392ed946b720b6.bindPopup(popup_390198ddb3006d07c28c8d0c3b94c9fe)
+        ;
+
+        
+    
+    
+            marker_1fe4cbac5e5960fa43392ed946b720b6.bindTooltip(
+                `<div>
+                     Koblenz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1fe4cbac5e5960fa43392ed946b720b6.setIcon(icon_bde77c26f7548aaffa146fd7168a7bff);
+            
+    
+            var marker_ce7b730c04c3fb21ea82942497f3d6c3 = L.marker(
+                [49.7499, 6.6371],
+                {
+}
+            ).addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+        
+    
+            var icon_81dccddefe0c8f21e87251e3f43bfd75 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c5404b2b1cb221c322f558a64c5d934 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f5c66919bd74a202d69b9153efe311de = $(`<div id="html_f5c66919bd74a202d69b9153efe311de" style="width: 100.0%; height: 100.0%;"><b>Trier</b><br>Bekannt für die Porta Nigra</div>`)[0];
+                popup_4c5404b2b1cb221c322f558a64c5d934.setContent(html_f5c66919bd74a202d69b9153efe311de);
+            
+        
+
+        marker_ce7b730c04c3fb21ea82942497f3d6c3.bindPopup(popup_4c5404b2b1cb221c322f558a64c5d934)
+        ;
+
+        
+    
+    
+            marker_ce7b730c04c3fb21ea82942497f3d6c3.bindTooltip(
+                `<div>
+                     Trier
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce7b730c04c3fb21ea82942497f3d6c3.setIcon(icon_81dccddefe0c8f21e87251e3f43bfd75);
+            
+    
+            var marker_c0687c75608106407ed17e85bf7cfbe1 = L.marker(
+                [49.4401, 7.7491],
+                {
+}
+            ).addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+        
+    
+            var icon_8ca99f3c27444419e5e9f48b4b508121 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc0d5e767507a0fee02422d608f056eb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78d23033953d1a892db58a89279c07ed = $(`<div id="html_78d23033953d1a892db58a89279c07ed" style="width: 100.0%; height: 100.0%;"><b>Kaiserslautern</b><br>Stadt am Pfälzerwald</div>`)[0];
+                popup_dc0d5e767507a0fee02422d608f056eb.setContent(html_78d23033953d1a892db58a89279c07ed);
+            
+        
+
+        marker_c0687c75608106407ed17e85bf7cfbe1.bindPopup(popup_dc0d5e767507a0fee02422d608f056eb)
+        ;
+
+        
+    
+    
+            marker_c0687c75608106407ed17e85bf7cfbe1.bindTooltip(
+                `<div>
+                     Kaiserslautern
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c0687c75608106407ed17e85bf7cfbe1.setIcon(icon_8ca99f3c27444419e5e9f48b4b508121);
+            
+    
+            var marker_a1c31757db228c2fc4fe418f909802bf = L.marker(
+                [49.8414, 7.8671],
+                {
+}
+            ).addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+        
+    
+            var icon_bc2bd7672ddc4a04b194eddec82e0f28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "heart",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58141516dd06b9e3a076a753f8083ba4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_42f87047e9add49f11dd3dd6c048a925 = $(`<div id="html_42f87047e9add49f11dd3dd6c048a925" style="width: 100.0%; height: 100.0%;"><b>Bad Kreuznach</b><br>Bekannt für seine Brückenhäuser</div>`)[0];
+                popup_58141516dd06b9e3a076a753f8083ba4.setContent(html_42f87047e9add49f11dd3dd6c048a925);
+            
+        
+
+        marker_a1c31757db228c2fc4fe418f909802bf.bindPopup(popup_58141516dd06b9e3a076a753f8083ba4)
+        ;
+
+        
+    
+    
+            marker_a1c31757db228c2fc4fe418f909802bf.bindTooltip(
+                `<div>
+                     Bad Kreuznach
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1c31757db228c2fc4fe418f909802bf.setIcon(icon_bc2bd7672ddc4a04b194eddec82e0f28);
+            
+    
+            map_3dc70d9b74fc7896dc7a872fb4827d41.fitBounds(
+                [[50.0, 8.271], [50.3569, 7.5889], [49.7499, 6.6371], [49.4401, 7.7491], [49.8414, 7.8671]],
+                {"padding": [20, 20]}
+            );
+        
+    
+            var layer_control_8139ed176b756b093f8bc6a6298d5d37_layers = {
+                base_layers : {
+                    "OpenStreetMap" : tile_layer_7bccfc5991da8502e3b70be57feccbad,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_8139ed176b756b093f8bc6a6298d5d37 = L.control.layers(
+                layer_control_8139ed176b756b093f8bc6a6298d5d37_layers.base_layers,
+                layer_control_8139ed176b756b093f8bc6a6298d5d37_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+
+        
+    
+            tile_layer_7bccfc5991da8502e3b70be57feccbad.addTo(map_3dc70d9b74fc7896dc7a872fb4827d41);
+        
+    
+                marker_05f99a4a6e41d95277dcacfad6085ba2.setIcon(icon_a69b843ffecbbc47054dfa5b06d395a7);
+            
+    
+                marker_1fe4cbac5e5960fa43392ed946b720b6.setIcon(icon_bde77c26f7548aaffa146fd7168a7bff);
+            
+    
+                marker_ce7b730c04c3fb21ea82942497f3d6c3.setIcon(icon_81dccddefe0c8f21e87251e3f43bfd75);
+            
+    
+                marker_c0687c75608106407ed17e85bf7cfbe1.setIcon(icon_8ca99f3c27444419e5e9f48b4b508121);
+            
+    
+                marker_a1c31757db228c2fc4fe418f909802bf.setIcon(icon_bc2bd7672ddc4a04b194eddec82e0f28);
+            
+</script>
+</html>

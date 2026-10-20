@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e8bfff04601e568b8a620d311dcf8359 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e8bfff04601e568b8a620d311dcf8359" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e8bfff04601e568b8a620d311dcf8359 = L.map(
+                "map_e8bfff04601e568b8a620d311dcf8359",
+                {
+                    center: [56.5, -4.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5970daa9aaa76946655b1386b2588d29 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+  "referrerPolicy": "origin",
+}
+
+            );
+        
+    
+            tile_layer_5970daa9aaa76946655b1386b2588d29.addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            var poly_line_ce2d54d0b07b76d952cf989d19e0f235 = L.polyline(
+                [[50.0, 8.271], [49.9667, 7.9], [50.0572, 7.7694], [50.1078, 7.7253], [50.1486, 7.7072], [50.3569, 7.5889]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            poly_line_ce2d54d0b07b76d952cf989d19e0f235.bindTooltip(
+                `<div>
+                     Reiseroute durch Rheinland-Pfalz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_563194e4d3167922e5a64a130533940b = L.marker(
+                [50.0, 8.271],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            var div_icon_b0b78401e982357f685ad7c64b269da2 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; color: white; background: red; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px;\"\u003e1\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_563194e4d3167922e5a64a130533940b.setIcon(div_icon_b0b78401e982357f685ad7c64b269da2);
+            
+    
+            var marker_331ddb6cf21330e51b5cf2ac871e74bf = L.marker(
+                [50.0, 8.271],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+        var popup_960310c11c551191ee077ef5d0320265 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6620cf030854ef9bcadd165ff4a8ad0b = $(`<div id="html_6620cf030854ef9bcadd165ff4a8ad0b" style="width: 100.0%; height: 100.0%;"><b>1. Mainz</b><br>Station 1 der Reiseroute</div>`)[0];
+                popup_960310c11c551191ee077ef5d0320265.setContent(html_6620cf030854ef9bcadd165ff4a8ad0b);
+            
+        
+
+        marker_331ddb6cf21330e51b5cf2ac871e74bf.bindPopup(popup_960310c11c551191ee077ef5d0320265)
+        ;
+
+        
+    
+    
+            marker_331ddb6cf21330e51b5cf2ac871e74bf.bindTooltip(
+                `<div>
+                     1. Mainz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_1b39435ae70993c78eb9f72c08c10701 = L.marker(
+                [49.9667, 7.9],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            var div_icon_3809be3f540531e62cbcd8d2be6310ee = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; color: white; background: red; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px;\"\u003e2\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_1b39435ae70993c78eb9f72c08c10701.setIcon(div_icon_3809be3f540531e62cbcd8d2be6310ee);
+            
+    
+            var marker_dd2b7ed98ea6df09b4ccce81c5f95b48 = L.marker(
+                [49.9667, 7.9],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+        var popup_d1af4ee95071bd108addd1d34f7af2ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06e5139afcb055987ecf8069cdcb1a82 = $(`<div id="html_06e5139afcb055987ecf8069cdcb1a82" style="width: 100.0%; height: 100.0%;"><b>2. Bingen am Rhein</b><br>Station 2 der Reiseroute</div>`)[0];
+                popup_d1af4ee95071bd108addd1d34f7af2ad.setContent(html_06e5139afcb055987ecf8069cdcb1a82);
+            
+        
+
+        marker_dd2b7ed98ea6df09b4ccce81c5f95b48.bindPopup(popup_d1af4ee95071bd108addd1d34f7af2ad)
+        ;
+
+        
+    
+    
+            marker_dd2b7ed98ea6df09b4ccce81c5f95b48.bindTooltip(
+                `<div>
+                     2. Bingen am Rhein
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d551e981610cb3b08ba093d08170530c = L.marker(
+                [50.0572, 7.7694],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            var div_icon_b3cc10e48067a0da5fc0d17b50f880c5 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; color: white; background: red; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px;\"\u003e3\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_d551e981610cb3b08ba093d08170530c.setIcon(div_icon_b3cc10e48067a0da5fc0d17b50f880c5);
+            
+    
+            var marker_2fdfe24a11355aa682d345f9a5e48415 = L.marker(
+                [50.0572, 7.7694],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+        var popup_2260ec17131c0cc8bb128e0075e8b03b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe3b1b3a0e0be985dcfe39355c5ece4c = $(`<div id="html_fe3b1b3a0e0be985dcfe39355c5ece4c" style="width: 100.0%; height: 100.0%;"><b>3. Bacharach</b><br>Station 3 der Reiseroute</div>`)[0];
+                popup_2260ec17131c0cc8bb128e0075e8b03b.setContent(html_fe3b1b3a0e0be985dcfe39355c5ece4c);
+            
+        
+
+        marker_2fdfe24a11355aa682d345f9a5e48415.bindPopup(popup_2260ec17131c0cc8bb128e0075e8b03b)
+        ;
+
+        
+    
+    
+            marker_2fdfe24a11355aa682d345f9a5e48415.bindTooltip(
+                `<div>
+                     3. Bacharach
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5501f3290d0eb7cd642a71b96e7475e8 = L.marker(
+                [50.1078, 7.7253],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            var div_icon_46c67c91bb82721ab771cab1e1e5a3cd = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; color: white; background: red; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px;\"\u003e4\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_5501f3290d0eb7cd642a71b96e7475e8.setIcon(div_icon_46c67c91bb82721ab771cab1e1e5a3cd);
+            
+    
+            var marker_64b814ea8da99a29df278e8643ef2240 = L.marker(
+                [50.1078, 7.7253],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+        var popup_8740100a34b9571b43df38b5d07af18a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d269428ba5a486d86fd389ebc7c808a8 = $(`<div id="html_d269428ba5a486d86fd389ebc7c808a8" style="width: 100.0%; height: 100.0%;"><b>4. Oberwesel</b><br>Station 4 der Reiseroute</div>`)[0];
+                popup_8740100a34b9571b43df38b5d07af18a.setContent(html_d269428ba5a486d86fd389ebc7c808a8);
+            
+        
+
+        marker_64b814ea8da99a29df278e8643ef2240.bindPopup(popup_8740100a34b9571b43df38b5d07af18a)
+        ;
+
+        
+    
+    
+            marker_64b814ea8da99a29df278e8643ef2240.bindTooltip(
+                `<div>
+                     4. Oberwesel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eb276c42846968209d681a77d0d51824 = L.marker(
+                [50.1486, 7.7072],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            var div_icon_50992c5e1c532f1cc2505b2ac873631e = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; color: white; background: red; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px;\"\u003e5\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_eb276c42846968209d681a77d0d51824.setIcon(div_icon_50992c5e1c532f1cc2505b2ac873631e);
+            
+    
+            var marker_6c6bd0d4df61fda0b2f20258a53021d0 = L.marker(
+                [50.1486, 7.7072],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+        var popup_a66c12ab19d9bab5a7f78ded27046984 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e653268f4e9787537e28bbb16ad8bf0 = $(`<div id="html_1e653268f4e9787537e28bbb16ad8bf0" style="width: 100.0%; height: 100.0%;"><b>5. St. Goar</b><br>Station 5 der Reiseroute</div>`)[0];
+                popup_a66c12ab19d9bab5a7f78ded27046984.setContent(html_1e653268f4e9787537e28bbb16ad8bf0);
+            
+        
+
+        marker_6c6bd0d4df61fda0b2f20258a53021d0.bindPopup(popup_a66c12ab19d9bab5a7f78ded27046984)
+        ;
+
+        
+    
+    
+            marker_6c6bd0d4df61fda0b2f20258a53021d0.bindTooltip(
+                `<div>
+                     5. St. Goar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d6cf2c5ec45d06e486c465ae32fbdbf9 = L.marker(
+                [50.3569, 7.5889],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+            var div_icon_4c1502ff9976a11c1cb01d5e25c59deb = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 14pt; color: white; background: red; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px;\"\u003e6\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_d6cf2c5ec45d06e486c465ae32fbdbf9.setIcon(div_icon_4c1502ff9976a11c1cb01d5e25c59deb);
+            
+    
+            var marker_eac3c7fb59a37a7c04278fbc033cf057 = L.marker(
+                [50.3569, 7.5889],
+                {
+}
+            ).addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+        var popup_6965065988c68815dd5f8cf0b80ba271 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd942bad55a7e8f95175aaf9d97533d2 = $(`<div id="html_fd942bad55a7e8f95175aaf9d97533d2" style="width: 100.0%; height: 100.0%;"><b>6. Koblenz</b><br>Station 6 der Reiseroute</div>`)[0];
+                popup_6965065988c68815dd5f8cf0b80ba271.setContent(html_fd942bad55a7e8f95175aaf9d97533d2);
+            
+        
+
+        marker_eac3c7fb59a37a7c04278fbc033cf057.bindPopup(popup_6965065988c68815dd5f8cf0b80ba271)
+        ;
+
+        
+    
+    
+            marker_eac3c7fb59a37a7c04278fbc033cf057.bindTooltip(
+                `<div>
+                     6. Koblenz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            tile_layer_5970daa9aaa76946655b1386b2588d29.addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+                marker_563194e4d3167922e5a64a130533940b.setIcon(div_icon_b0b78401e982357f685ad7c64b269da2);
+            
+    
+                marker_1b39435ae70993c78eb9f72c08c10701.setIcon(div_icon_3809be3f540531e62cbcd8d2be6310ee);
+            
+    
+                marker_d551e981610cb3b08ba093d08170530c.setIcon(div_icon_b3cc10e48067a0da5fc0d17b50f880c5);
+            
+    
+                marker_5501f3290d0eb7cd642a71b96e7475e8.setIcon(div_icon_46c67c91bb82721ab771cab1e1e5a3cd);
+            
+    
+                marker_eb276c42846968209d681a77d0d51824.setIcon(div_icon_50992c5e1c532f1cc2505b2ac873631e);
+            
+    
+                marker_d6cf2c5ec45d06e486c465ae32fbdbf9.setIcon(div_icon_4c1502ff9976a11c1cb01d5e25c59deb);
+            
+    
+            tile_layer_5970daa9aaa76946655b1386b2588d29.addTo(map_e8bfff04601e568b8a620d311dcf8359);
+        
+    
+                marker_563194e4d3167922e5a64a130533940b.setIcon(div_icon_b0b78401e982357f685ad7c64b269da2);
+            
+    
+                marker_1b39435ae70993c78eb9f72c08c10701.setIcon(div_icon_3809be3f540531e62cbcd8d2be6310ee);
+            
+    
+                marker_d551e981610cb3b08ba093d08170530c.setIcon(div_icon_b3cc10e48067a0da5fc0d17b50f880c5);
+            
+    
+                marker_5501f3290d0eb7cd642a71b96e7475e8.setIcon(div_icon_46c67c91bb82721ab771cab1e1e5a3cd);
+            
+    
+                marker_eb276c42846968209d681a77d0d51824.setIcon(div_icon_50992c5e1c532f1cc2505b2ac873631e);
+            
+    
+                marker_d6cf2c5ec45d06e486c465ae32fbdbf9.setIcon(div_icon_4c1502ff9976a11c1cb01d5e25c59deb);
+            
+</script>
+</html>

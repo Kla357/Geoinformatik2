@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D-Gebäudemodell Deutschland</title>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.137/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.137/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <style>
+    html,
+    body,
+    #cesiumContainer {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #loadStatus {
+      position: absolute;
+      z-index: 2;
+      top: 1rem;
+      left: 1rem;
+      max-width: min(26rem, calc(100% - 2rem));
+      padding: 0.7rem 1rem;
+      border: 1px solid #d5e1d1;
+      border-radius: 0.7rem;
+      background: rgba(255, 254, 250, 0.94);
+      color: #26392f;
+      font: 14px/1.45 system-ui, sans-serif;
+      box-shadow: 0 0.3rem 1rem rgba(28, 53, 39, 0.16);
+    }
+
+    #loadStatus[hidden] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="cesiumContainer" aria-label="Interaktive 3D-Karte mit Gebäuden"></div>
+  <div id="loadStatus" role="status" aria-live="polite">3D-Gebäudemodell wird geladen …</div>
+  <script>
+    const loadStatus = document.getElementById("loadStatus");
+    const viewer = new Cesium.Viewer("cesiumContainer", {
+      animation: false,
+      baseLayerPicker: false,
+      geocoder: false,
+      homeButton: false,
+      navigationHelpButton: true,
+      sceneModePicker: false,
+      timeline: false,
+      baseLayer: false
+    });
+
+    const basemap = new Cesium.WebMapServiceImageryProvider({
+      url: "https://sgx.geodatenzentrum.de/wms_basemapde",
+      layers: "de_basemapde_web_raster_farbe",
+      parameters: {
+        service: "WMS",
+        version: "1.3.0",
+        request: "GetMap",
+        format: "image/png",
+        transparent: false
+      },
+      credit: new Cesium.Credit(
+        '<a href="https://basemap.de/" target="_blank" rel="noopener noreferrer">basemap.de</a>'
+      )
+    });
+    viewer.imageryLayers.addImageryProvider(basemap);
+
+    viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(8.27, 50.0, 6500),
+      orientation: {
+        heading: Cesium.Math.toRadians(0),
+        pitch: Cesium.Math.toRadians(-45),
+        roll: 0
+      }
+    });
+
+    async function loadBuildings() {
+      try {
+        const buildings = await Cesium.Cesium3DTileset.fromUrl(
+          "https://sgx.geodatenzentrum.de/gdz_basemapde_3d_gebaeude/lod2_4326_null.json",
+          { showOutline: false }
+        );
+        viewer.scene.primitives.add(buildings);
+        buildings.style = new Cesium.Cesium3DTileStyle({
+          color: {
+            conditions: [
+              ["${surface} === 'wall'", "color('#e8e5dc')"],
+              ["${surface} === 'roof'", "color('#c97862')"],
+              ["${surface} === 'bridge'", "color('#999999')"],
+              ["true", "color('#ddd8ca')"]
+            ]
+          }
+        });
+        loadStatus.hidden = true;
+      } catch (error) {
+        console.error("Das basemap.de-3D-Gebäudemodell konnte nicht geladen werden.", error);
+        loadStatus.textContent = "Das 3D-Gebäudemodell konnte nicht geladen werden. Bitte prüfe deine Internetverbindung oder versuche es später erneut.";
+      }
+    }
+
+    loadBuildings();
+  </script>
+</body>
+</html>
